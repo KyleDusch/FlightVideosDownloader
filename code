@@ -1,0 +1,32 @@
+from pytube import YouTube
+import os
+import sys
+
+if len(sys.argv) < 2:
+    print("Please provide the required command-line argument (https://www.youtube.com/watch?v=-cVacjs-D0w).")
+else:
+    link = sys.argv[1]
+    yt = YouTube(link)
+
+    print("Title: ", yt.title)
+    print("Views: ", yt.views)
+
+    # Choose the stream with the highest resolution
+    yd = yt.streams.get_highest_resolution()
+
+    # Create the target directory if it doesn't exist
+    target_directory = r'C:\\Users\\KDusc\\OneDrive\\Pictures\\Projects'
+
+    # Define the complete path, including the video's name
+    video_path = os.path.join(target_directory, yt.title + '.mp4')
+
+    # Download the video
+    yd.download(output_path=target_directory, filename=yt.title + '.mp4')
+
+#EXAMPLE OUTPUT
+#C:\Users\KDusc\IdeaProjects\YoutubeDownloader\venv\Scripts\python.exe C:\Users\KDusc\IdeaProjects\YoutubeDownloader\ytDownloader.py "https://www.youtube.com/watch?v=rHux0gMZ3Eg&t=1265s"
+#example command line code
+#https://www.youtube.com/watch?v=-cVacjs-D0w
+#Result showing successful download Title:  Pediatric Advanced Life Support (PALS) Cardiac Arrest Algorithm (A-systole & PEA)
+#Views:  18943
+  
