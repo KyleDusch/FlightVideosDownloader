@@ -5,3 +5,5 @@ Ran via a command prompt in IntelliJ IDEA. The youtube link is copied either fro
 
 Further design to this project would be the implemantation of a progress bar using the Python Package TQDM which "derives from the Arabic word taqaddum (تقدّم), meaning progress", basically allows the user to see the video being downloaded in real time. 
 The link where I obtained the quote and information is provided: https://pypi.org/project/tqdm/  
+
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white) 
