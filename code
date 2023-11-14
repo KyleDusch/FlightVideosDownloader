@@ -10,6 +10,7 @@ else:
     link = sys.argv[1]
     yt = YouTube(link)
 
+    #first extraction of data
     print("Title: ", yt.title)
     print("Views: ", yt.views)
 
@@ -20,6 +21,7 @@ else:
     target_directory = r'C:\\Users\\KDusc\\OneDrive\\Pictures\\Projects'
 
     # Define the complete path, including the video's name
+    #Instructing the computer to add the file as an mp4 file not mp3
     video_path = os.path.join(target_directory, yt.title + '.mp4')
 
     # Download the video
