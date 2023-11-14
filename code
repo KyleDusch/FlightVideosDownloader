@@ -1,7 +1,9 @@
+#Setting the template and installing packages
 from pytube import YouTube
 import os
 import sys
 
+#The if statement for obtaining the video link
 if len(sys.argv) < 2:
     print("Please provide the required command-line argument (https://www.youtube.com/watch?v=-cVacjs-D0w).")
 else:
